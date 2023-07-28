@@ -44,7 +44,7 @@ def hm_input_stick():
         while stick >stick_pile or stick<1:
             print(name,end='')
             stick = int(input(", how many sticks you will take : "))
-            if stick not in range(1,stick_pile):
+            if stick not in range(1,stick_pile+1):
                 print("Have",stick_pile,"sticks you can take!")
                 print("")
     return stick   
