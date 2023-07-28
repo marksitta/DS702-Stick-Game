@@ -25,7 +25,7 @@ stick_pile = st_pile_input()
 print("")
 
 ## set number of stick can take
-num_take = 5
+num_take = 2
 
 # input and check condution function
 def hm_input_stick():
@@ -33,12 +33,16 @@ def hm_input_stick():
     if stick_pile>num_take:
         while stick not in range (1,num_take+1):
             print(name,end='')
-            stick = int(input(", how many sticks you will take : "))
-            if stick > num_take : 
-                print("No you cannot take more than",num_take,"sticks!")
-                print("")
-            elif stick < 1: 
-                print("No you cannot take less than 1 sticks!")
+            try:
+                stick = int(input(", how many sticks you will take : "))
+                if stick > num_take : 
+                    print("No you cannot take more than",num_take,"sticks!")
+                    print("")
+                elif stick < 1: 
+                    print("No you cannot take less than 1 sticks!")
+                    print("")
+            except ValueError:
+                print("Please input number you will take")
                 print("")
     else:
         while stick >stick_pile or stick<1:
