@@ -25,7 +25,7 @@ stick_pile = st_pile_input()
 print("")
 
 ## set number of stick can take
-num_take = 2
+num_take = 5
 
 # input and check condution function
 def hm_input_stick():
@@ -60,10 +60,10 @@ def ai_brain():
         else:
             a=stick_pile%(num_take + 2)
     else:
-        if stick_pile== num_take+1:
+        if stick_pile == num_take+1:
             a=stick_pile-1
         else:
-            a=random.randrange(1,num_take)
+            a=random.randrange(1,num_take+1)
     return a
 
 
